@@ -28,6 +28,9 @@ const migrateRoutes = require('./routes/migrate');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+// Trust proxy for Railway/production deployment
+app.set('trust proxy', 1);
+
 // =========================================
 // SECURITY MIDDLEWARE
 // =========================================
