@@ -1,5 +1,5 @@
 /**
- * server.js — Express application entry point
+ * server.js â€” Express application entry point
  *
  * eHorizon Solutions UAE Business Setup Calculator Backend
  *
@@ -27,9 +27,6 @@ const migrateRoutes = require('./routes/migrate');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-
-// Trust proxy for Railway/production deployment
-app.set('trust proxy', 1);
 
 // =========================================
 // SECURITY MIDDLEWARE
@@ -94,7 +91,7 @@ app.use(generalLimiter);
 // BODY PARSING
 // =========================================
 
-// Webhooks need raw body for signature verification — handle before JSON parser
+// Webhooks need raw body for signature verification â€” handle before JSON parser
 // The webhook route uses its own raw body parser internally
 app.use('/api/webhooks', webhookRoutes);
 
