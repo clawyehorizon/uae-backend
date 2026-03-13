@@ -1,5 +1,5 @@
 /**
- * server.js — Express application entry point
+ * server.js â€” Express application entry point
  *
  * eHorizon Solutions UAE Business Setup Calculator Backend
  *
@@ -23,9 +23,14 @@ const checkoutRoutes = require('./routes/checkout');
 const webhookRoutes = require('./routes/webhooks');
 const reportRoutes = require('./routes/report');
 const leadsRoutes = require('./routes/leads');
+const migrateRoutes = require('./routes/migrate');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+// Trust proxy for Railway/production deployment (fixes rate limiter crash)
+app.set('trust proxy', 1);
+
 
 // =========================================
 // SECURITY MIDDLEWARE
@@ -90,7 +95,7 @@ app.use(generalLimiter);
 // BODY PARSING
 // =========================================
 
-// Webhooks need raw body for signature verification — handle before JSON parser
+// Webhooks need raw body for signature verification â€” handle before JSON parser
 // The webhook route uses its own raw body parser internally
 app.use('/api/webhooks', webhookRoutes);
 
@@ -121,6 +126,9 @@ app.use('/api/report', reportRoutes);
 
 // Leads: capture form leads
 app.use('/api/leads', leadsRoutes);
+
+// Migrate: one-time database setup (DISABLE after first run)
+app.use('/api/migrate', migrateRoutes);
 
 // =========================================
 // ERROR HANDLING
