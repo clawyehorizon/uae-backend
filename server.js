@@ -23,7 +23,8 @@ const checkoutRoutes = require('./routes/checkout');
 const webhookRoutes = require('./routes/webhooks');
 const reportRoutes = require('./routes/report');
 const leadsRoutes = require('./routes/leads');
-const migrateRoutes = require('./routes/migrate');
+// DISABLED: Migration complete — endpoint removed for security
+// const migrateRoutes = require('./routes/migrate');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -127,8 +128,8 @@ app.use('/api/report', reportRoutes);
 // Leads: capture form leads
 app.use('/api/leads', leadsRoutes);
 
-// Migrate: one-time database setup (DISABLE after first run)
-app.use('/api/migrate', migrateRoutes);
+// DISABLED: Migration complete — endpoint removed for security
+// app.use('/api/migrate', migrateRoutes);
 
 // =========================================
 // ERROR HANDLING
