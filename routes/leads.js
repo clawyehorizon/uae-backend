@@ -132,6 +132,50 @@ router.post('/', leadsLimiter, async (req, res, next) => {
     }
 
     // =========================================
+    // SPAM PREVENTION — reCAPTCHA v3 verification
+    // =========================================
+    const recaptchaSecret = process.env.RECAPTCHA_SECRET_KEY;
+    const recaptchaToken = req.body?.recaptcha_token;
+
+    if (!recaptchaSecret) {
+      console.error('[SPAM] RECAPTCHA_SECRET_KEY not configured');
+      return res.status(503).json({ error: 'Spam protection not configured' });
+    }
+
+    if (!recaptchaToken) {
+      console.warn('[SPAM] Missing reCAPTCHA token from IP:', req.ip);
+      return res.status(400).json({ error: 'Spam detected' });
+    }
+
+    try {
+      const params = new URLSearchParams();
+      params.append('secret', recaptchaSecret);
+      params.append('response', recaptchaToken);
+
+      const verifyResponse = await fetch('https://www.google.com/recaptcha/api/siteverify', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: params.toString(),
+      });
+
+      const verifyData = await verifyResponse.json();
+
+      if (!verifyData.success || (typeof verifyData.score === 'number' && verifyData.score < 0.5)) {
+        console.warn('[SPAM] reCAPTCHA rejected', {
+          ip: req.ip,
+          score: verifyData.score,
+          action: verifyData.action,
+          hostname: verifyData.hostname,
+          errors: verifyData['error-codes'],
+        });
+        return res.status(400).json({ error: 'Spam detected' });
+      }
+    } catch (verifyErr) {
+      console.error('[SPAM] reCAPTCHA verify failed', verifyErr);
+      return res.status(502).json({ error: 'Spam protection failed' });
+    }
+
+    // =========================================
     // Insert lead
     // =========================================
     const { rows } = await pool.query(
