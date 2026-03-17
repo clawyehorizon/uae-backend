@@ -55,8 +55,8 @@ app.use(helmet({
 app.use(cors({
   origin: process.env.ALLOWED_ORIGINS
     ? process.env.ALLOWED_ORIGINS.split(',').map(s => s.trim())
-    : ['http://localhost:3000'],
-  methods: ['GET', 'POST'],
+    : ['http://localhost:3000', 'https://ehorizonsolutions.net', 'https://bejewelled-figolla-0458c0.netlify.app'],
+  methods: ['GET', 'POST', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true,
 }));
