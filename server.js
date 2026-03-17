@@ -52,10 +52,20 @@ app.use(helmet({
 }));
 
 // CORS: allow frontend origin
+const allowedOrigins = process.env.ALLOWED_ORIGINS
+  ? process.env.ALLOWED_ORIGINS.split(',').map(s => s.trim())
+  : ['http://localhost:3000', 'https://ehorizonsolutions.net', 'https://bejewelled-figolla-0458c0.netlify.app'];
+
+// Always ensure production domains are included
+if (!allowedOrigins.includes('https://ehorizonsolutions.net')) {
+  allowedOrigins.push('https://ehorizonsolutions.net');
+}
+if (!allowedOrigins.includes('https://bejewelled-figolla-0458c0.netlify.app')) {
+  allowedOrigins.push('https://bejewelled-figolla-0458c0.netlify.app');
+}
+
 app.use(cors({
-  origin: process.env.ALLOWED_ORIGINS
-    ? process.env.ALLOWED_ORIGINS.split(',').map(s => s.trim())
-    : ['http://localhost:3000', 'https://ehorizonsolutions.net', 'https://bejewelled-figolla-0458c0.netlify.app'],
+  origin: allowedOrigins,
   methods: ['GET', 'POST', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true,
