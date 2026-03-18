@@ -67,7 +67,7 @@ if (!allowedOrigins.includes('https://bejewelled-figolla-0458c0.netlify.app')) {
 app.use(cors({
   origin: allowedOrigins,
   methods: ['GET', 'POST', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'x-api-key'],
   credentials: true,
 }));
 
