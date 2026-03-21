@@ -79,8 +79,8 @@ router.post('/', leadsLimiter, async (req, res, next) => {
       status,
     } = req.body || {};
 
-    if (!name || !email) {
-      return res.status(400).json({ error: 'name and email are required' });
+    if (!email) {
+      return res.status(400).json({ error: 'email is required' });
     }
 
     // =========================================
@@ -190,7 +190,7 @@ router.post('/', leadsLimiter, async (req, res, next) => {
        VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)
        RETURNING *`,
       [
-        name,
+        name || 'Website Lead',
         email,
         phone || null,
         business_activity || null,
