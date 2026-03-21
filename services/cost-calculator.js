@@ -112,7 +112,7 @@ const ZONE_REPUTATION = {
  */
 function calculateCosts(userInputs) {
   // Load pricing database
-  const dbPath = path.join(__dirname, '..', '..', 'data', 'pricing-database.json');
+  const dbPath = path.join(__dirname, '..', 'data', 'pricing-database.json');
 
   if (!fs.existsSync(dbPath)) {
     throw new Error(`Pricing database not found at ${dbPath}`);
@@ -786,4 +786,265 @@ function buildMainlandAdvice(inputs, topZone, mainlandZone, freezoneTop) {
 // EXPORTS
 // =========================================
 
-module.exports = { calculateCosts };
+// =========================================
+// QUICK ESTIMATE (for frontend /api/estimate)
+// =========================================
+
+/**
+ * Zone tier definitions for the frontend selector.
+ */
+const ZONE_TIERS = {
+  budget: {
+    label: 'Most Affordable',
+    emoji: '💰',
+    zones: ['ifza', 'rakez', 'shams', 'ajman'],
+    description: 'Zones in RAK, Sharjah, Fujairah, Ajman',
+  },
+  dubai: {
+    label: 'Dubai Presence',
+    emoji: '🏙️',
+    zones: ['dmcc', 'meydan', 'dso'],
+    description: 'DMCC, Meydan, Dubai Silicon Oasis',
+  },
+  financial: {
+    label: 'Financial / Regulated',
+    emoji: '🏦',
+    zones: ['difc', 'adgm'],
+    description: 'DIFC (Dubai), ADGM (Abu Dhabi)',
+  },
+  any: {
+    label: 'Not Sure Yet',
+    emoji: '🤷',
+    zones: null, // all zones
+    description: "We'll recommend the best match",
+  },
+};
+
+/**
+ * Quick estimate for the frontend calculator.
+ * Returns cost ranges based on partial inputs, using real pricing data.
+ *
+ * @param {Object} inputs
+ * @param {string} inputs.activity - Business activity
+ * @param {string} inputs.setupType - mainland/freezone/offshore/not-sure
+ * @param {number} inputs.visaCount - Number of visas
+ * @param {string} inputs.officePreference - Office type
+ * @param {string} inputs.zoneTier - budget/dubai/financial/any
+ * @param {string} inputs.proServices - yes/no/not-sure
+ * @param {boolean} inputs.familyVisas - Include family visa costs
+ *
+ * @returns {Object} Estimate with low/high/typical totals and breakdown
+ */
+function quickEstimate(inputs) {
+  // Load pricing database
+  const dbPath = path.join(__dirname, '..', 'data', 'pricing-database.json');
+  if (!fs.existsSync(dbPath)) {
+    throw new Error(`Pricing database not found at ${dbPath}`);
+  }
+  const pricingDb = JSON.parse(fs.readFileSync(dbPath, 'utf8'));
+
+  const activity = normalizeActivity(inputs.activity);
+  const visaCount = Math.max(0, Math.min(20, parseInt(inputs.visaCount, 10) || 1));
+  const officePreference = normalizeOffice(inputs.officePreference);
+  const setupType = (inputs.setupType || 'freezone').toLowerCase().trim();
+  const zoneTier = inputs.zoneTier || 'any';
+  const proServices = inputs.proServices || 'not-sure';
+  const familyVisas = inputs.familyVisas || false;
+
+  // Determine which zones to consider
+  const tierConfig = ZONE_TIERS[zoneTier] || ZONE_TIERS.any;
+  const allowedZoneIds = tierConfig.zones; // null = all
+
+  // Calculate costs for each matching zone
+  const zoneResults = [];
+
+  // Freezone zones
+  if (setupType !== 'mainland') {
+    for (const zone of pricingDb.zones) {
+      if (allowedZoneIds && !allowedZoneIds.includes(zone.zone_id)) continue;
+      const result = calculateZoneCost(zone, activity, visaCount, officePreference);
+      if (result) {
+        result.zoneType = 'freezone';
+        zoneResults.push(result);
+      }
+    }
+  }
+
+  // Mainland
+  if (setupType !== 'freezone' && setupType !== 'offshore' && pricingDb.mainland?.dubai_ded) {
+    const mainlandResult = calculateZoneCost(pricingDb.mainland.dubai_ded, activity, visaCount, officePreference);
+    if (mainlandResult) {
+      mainlandResult.zoneType = 'mainland';
+      zoneResults.push(mainlandResult);
+    }
+  }
+
+  // Offshore fallback (simplified)
+  if (setupType === 'offshore') {
+    return {
+      low: 8000,
+      high: 16000,
+      typical: 12000,
+      zoneCount: 0,
+      confidence: 'medium',
+      cheapestZone: null,
+      bestMatchZone: null,
+      zoneTier,
+      setupType,
+      breakdown: [
+        { item: 'Offshore License & Registration', low: 8000, high: 16000, notes: 'Offshore license, registration & registered agent fees.' },
+        { item: 'TOTAL (Year 1)', low: 8000, high: 16000, notes: '', isTotal: true },
+      ],
+    };
+  }
+
+  if (zoneResults.length === 0) {
+    // Fallback to hardcoded if no zones matched
+    return buildFallbackEstimate(inputs);
+  }
+
+  // Sort by total cost
+  zoneResults.sort((a, b) => a.totalYear1WithBuffer - b.totalYear1WithBuffer);
+
+  // Build breakdown from the range of zone results
+  const allTotals = zoneResults.map(z => z.totalYear1WithBuffer);
+  const lowTotal = Math.min(...allTotals);
+  const highTotal = Math.max(...allTotals);
+  const typicalTotal = Math.round(allTotals.reduce((a, b) => a + b, 0) / allTotals.length);
+
+  // Build a meaningful breakdown using the cheapest and most expensive zone
+  const cheapestZone = zoneResults[0];
+  const expensiveZone = zoneResults[zoneResults.length - 1];
+
+  // Aggregate categories across zones for range
+  const catLow = aggregateByCat(cheapestZone.costs.year1.items);
+  const catHigh = aggregateByCat(expensiveZone.costs.year1.items);
+  const allCats = [...new Set([...Object.keys(catLow), ...Object.keys(catHigh)])];
+
+  const breakdown = [];
+  const catLabels = {
+    license: 'License & Registration',
+    visa: 'Visa Costs',
+    office: 'Office (Annual)',
+    government: 'Government Fees',
+    pro: 'PRO Services',
+  };
+
+  for (const cat of allCats) {
+    const low = catLow[cat] || 0;
+    const high = catHigh[cat] || 0;
+    breakdown.push({
+      item: catLabels[cat] || formatFeeKey(cat),
+      low: Math.min(low, high),
+      high: Math.max(low, high),
+      notes: '',
+    });
+  }
+
+  // Add health insurance estimate if visas > 0
+  if (visaCount > 0) {
+    const healthLow = 1000 * visaCount;
+    const healthHigh = 2000 * visaCount;
+    breakdown.push({
+      item: `Health Insurance (×${visaCount})`,
+      low: healthLow,
+      high: healthHigh,
+      notes: 'Mandatory health insurance per visa holder (estimate).',
+    });
+    // Adjust totals
+    const adjustedLow = lowTotal + healthLow;
+    const adjustedHigh = highTotal + healthHigh;
+    breakdown.push({ item: 'TOTAL (Year 1)', low: adjustedLow, high: adjustedHigh, notes: '', isTotal: true });
+
+    return {
+      low: adjustedLow,
+      high: adjustedHigh,
+      typical: Math.round((adjustedLow + adjustedHigh) / 2),
+      zoneCount: zoneResults.length,
+      confidence: zoneResults.length <= 4 ? 'high' : 'medium',
+      cheapestZone: cheapestZone.zoneName,
+      bestMatchZone: cheapestZone.zoneName,
+      zoneTier,
+      setupType,
+      breakdown,
+      zoneBreakdown: zoneResults.slice(0, 5).map(z => ({
+        zoneName: z.zoneName,
+        zoneId: z.zoneId,
+        emirate: z.emirate,
+        totalYear1: z.totalYear1WithBuffer,
+        renewalCost: z.renewalCost,
+        confidence: z.overallConfidence,
+      })),
+    };
+  }
+
+  // No visas
+  breakdown.push({ item: 'TOTAL (Year 1)', low: lowTotal, high: highTotal, notes: '', isTotal: true });
+
+  return {
+    low: lowTotal,
+    high: highTotal,
+    typical: typicalTotal,
+    zoneCount: zoneResults.length,
+    confidence: zoneResults.length <= 4 ? 'high' : 'medium',
+    cheapestZone: cheapestZone.zoneName,
+    bestMatchZone: cheapestZone.zoneName,
+    zoneTier,
+    setupType,
+    breakdown,
+    zoneBreakdown: zoneResults.slice(0, 5).map(z => ({
+      zoneName: z.zoneName,
+      zoneId: z.zoneId,
+      emirate: z.emirate,
+      totalYear1: z.totalYear1WithBuffer,
+      renewalCost: z.renewalCost,
+      confidence: z.overallConfidence,
+    })),
+  };
+}
+
+/**
+ * Fallback estimate using hardcoded ranges (graceful degradation).
+ */
+function buildFallbackEstimate(inputs) {
+  const setupType = (inputs.setupType || 'freezone').toLowerCase();
+  const visaCount = parseInt(inputs.visaCount, 10) || 1;
+  const officeType = inputs.officePreference || 'flexi-desk';
+
+  const baseCosts = {
+    freezone: { min: 12000, max: 25000 },
+    mainland: { min: 15000, max: 35000 },
+    offshore: { min: 8000, max: 16000 },
+  };
+
+  const base = baseCosts[setupType] || baseCosts.freezone;
+  const visaCost = { min: 3000 * visaCount, max: 6000 * visaCount };
+  const officeCost = officeType === 'flexi-desk' || officeType === 'flexi_desk'
+    ? { min: 5000, max: 12000 }
+    : officeType === 'dedicated-office' || officeType === 'physical_office'
+      ? { min: 15000, max: 50000 }
+      : { min: 0, max: 0 };
+
+  const low = base.min + visaCost.min + officeCost.min;
+  const high = base.max + visaCost.max + officeCost.max;
+
+  return {
+    low,
+    high,
+    typical: Math.round((low + high) / 2),
+    zoneCount: 0,
+    confidence: 'low',
+    cheapestZone: null,
+    bestMatchZone: null,
+    zoneTier: inputs.zoneTier || 'any',
+    setupType,
+    breakdown: [
+      { item: 'License & Registration', low: base.min, high: base.max, notes: 'Estimated range.' },
+      { item: `Visa Costs (×${visaCount})`, low: visaCost.min, high: visaCost.max, notes: '' },
+      { item: 'Office (Annual)', low: officeCost.min, high: officeCost.max, notes: '' },
+      { item: 'TOTAL (Year 1)', low, high, notes: '', isTotal: true },
+    ],
+  };
+}
+
+module.exports = { calculateCosts, quickEstimate, ZONE_TIERS };

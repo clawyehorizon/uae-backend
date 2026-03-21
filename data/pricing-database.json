@@ -1,0 +1,3453 @@
+{
+  "version": "1.0",
+  "last_updated": "2026-03-07T11:00:00+04:00",
+  "last_verified_by": "ai_research",
+  "update_history": [
+    {
+      "date": "2026-03-07",
+      "scrape_id": "initial",
+      "changes": 0,
+      "approved_by": "ai_research",
+      "notes": "Initial population from freezone-pricing-research.md and mainland-pricing-research.md"
+    }
+  ],
+  "zones": [
+    {
+      "zone_id": "dmcc",
+      "zone_name": "DMCC",
+      "zone_type": "freezone",
+      "emirate": "Dubai",
+      "website": "https://www.dmcc.ae",
+      "last_scraped": "2026-03-07T11:00:00+04:00",
+      "scrape_confidence": "high",
+      "supported_activities": [
+        "trading",
+        "services",
+        "consulting",
+        "technology",
+        "ecommerce"
+      ],
+      "pricing": {
+        "license_fees": {
+          "trading": {
+            "value": 20265,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "high",
+            "source": "https://www.dmcc.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "Standard Trading/Service license. General Trading is 50,265 AED.",
+            "range": {
+              "low": 19860,
+              "high": 20670
+            }
+          },
+          "general_trading": {
+            "value": 50265,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "high",
+            "source": "https://www.dmcc.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "General Trading license — significantly higher than standard",
+            "range": {
+              "low": 49260,
+              "high": 51270
+            }
+          },
+          "services": {
+            "value": 20265,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "high",
+            "source": "https://www.dmcc.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "Same as Standard Trading/Service",
+            "range": {
+              "low": 19860,
+              "high": 20670
+            }
+          },
+          "consulting": {
+            "value": 20265,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "high",
+            "source": "https://www.dmcc.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "Falls under Standard Trading/Service category",
+            "range": {
+              "low": 19860,
+              "high": 20670
+            }
+          },
+          "technology": {
+            "value": 20265,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "high",
+            "source": "https://www.dmcc.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": null,
+            "range": {
+              "low": 19860,
+              "high": 20670
+            }
+          },
+          "ecommerce": {
+            "value": 20265,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "high",
+            "source": "https://www.dmcc.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": null,
+            "range": {
+              "low": 19860,
+              "high": 20670
+            }
+          },
+          "industrial": {
+            "value": 8265,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "high",
+            "source": "https://www.dmcc.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "Industrial license (50-100 sqm)",
+            "range": {
+              "low": 8100,
+              "high": 8430
+            }
+          }
+        },
+        "visa_costs": {
+          "employment_visa": {
+            "value": 4750,
+            "unit": "AED",
+            "frequency": "per_visa",
+            "confidence": "medium",
+            "source": "https://www.dmcc.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "Typical range 3,500–6,000 AED. Using midpoint.",
+            "range": {
+              "low": 4180,
+              "high": 5320
+            }
+          },
+          "medical_fitness": {
+            "value": 500,
+            "unit": "AED",
+            "frequency": "per_visa",
+            "confidence": "medium",
+            "source": "https://www.dmcc.ae",
+            "source_type": "aggregated",
+            "last_verified": "2026-03-07",
+            "notes": "Standard UAE medical test",
+            "range": {
+              "low": 440,
+              "high": 560
+            }
+          },
+          "emirates_id": {
+            "value": 370,
+            "unit": "AED",
+            "frequency": "per_visa",
+            "confidence": "high",
+            "source": "https://www.dmcc.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "2-year Emirates ID",
+            "range": {
+              "low": 352,
+              "high": 389
+            }
+          },
+          "visa_deposit": {
+            "value": 2500,
+            "unit": "AED",
+            "frequency": "per_visa",
+            "confidence": "medium",
+            "source": "https://www.dmcc.ae",
+            "source_type": "aggregated",
+            "last_verified": "2026-03-07",
+            "notes": "Refundable visa deposit",
+            "range": {
+              "low": 2200,
+              "high": 2800
+            }
+          }
+        },
+        "office_costs": {
+          "flexi_desk": {
+            "value": 15900,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "high",
+            "source": "https://www.dmcc.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "Standard flexi desk, up to 3 visas. Range 15,000–16,800.",
+            "range": {
+              "low": 15105,
+              "high": 16695
+            }
+          },
+          "serviced_office": {
+            "value": 35000,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "medium",
+            "source": "https://www.dmcc.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "From 35,000 AED, supports 4–5 visas",
+            "range": {
+              "low": 31500,
+              "high": 38500
+            }
+          },
+          "physical_office": {
+            "value": 50000,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "low",
+            "source": "https://www.dmcc.ae",
+            "source_type": "aggregated",
+            "last_verified": "2026-03-07",
+            "notes": "Varies widely: 50–150 AED/sq ft annually",
+            "range": {
+              "low": 37500,
+              "high": 62500
+            }
+          }
+        },
+        "government_fees": {
+          "registration_fee": {
+            "value": 9010,
+            "unit": "AED",
+            "frequency": "one-time",
+            "confidence": "high",
+            "source": "https://www.dmcc.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "Standard registration fee 9,000–9,020 AED"
+          },
+          "establishment_card": {
+            "value": 1825,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "high",
+            "source": "https://www.dmcc.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": null
+          },
+          "articles_of_association": {
+            "value": 2020,
+            "unit": "AED",
+            "frequency": "one-time",
+            "confidence": "high",
+            "source": "https://www.dmcc.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": null
+          },
+          "knowledge_innovation_fee": {
+            "value": 20,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "high",
+            "source": "https://www.dmcc.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "Knowledge & Innovation Dirham per license"
+          }
+        },
+        "pro_fees": {
+          "formation_package": {
+            "value": 5000,
+            "unit": "AED",
+            "frequency": "one-time",
+            "confidence": "medium",
+            "source": "https://www.dmcc.ae",
+            "source_type": "third_party",
+            "last_verified": "2026-03-07",
+            "notes": "Optional — DMCC has digital processing"
+          },
+          "annual_renewal_assistance": {
+            "value": 3000,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "medium",
+            "source": "https://www.dmcc.ae",
+            "source_type": "third_party",
+            "last_verified": "2026-03-07",
+            "notes": "Optional PRO renewal service"
+          }
+        },
+        "additional_costs": {
+          "health_insurance": {
+            "value": 1500,
+            "range": {
+              "low": 1000,
+              "high": 2000
+            },
+            "unit": "AED",
+            "frequency": "annual_per_visa",
+            "confidence": "medium",
+            "source": "market_research",
+            "source_type": "aggregated",
+            "last_verified": "2026-03-07",
+            "notes": "Mandatory health insurance per visa holder. Basic plan starts ~AED 1,000; comprehensive ~AED 2,000+."
+          },
+          "corporate_tax_compliance": {
+            "value": 8000,
+            "range": {
+              "low": 5000,
+              "high": 15000
+            },
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "low",
+            "source": "market_research",
+            "source_type": "aggregated",
+            "last_verified": "2026-03-07",
+            "notes": "Audit + tax filing. Applies if revenue > AED 375K. Year 2+ cost."
+          }
+        }
+      },
+      "packages": [
+        {
+          "name": "Basic Flexi Package",
+          "includes": [
+            "trade_license",
+            "establishment_card",
+            "flexi_desk",
+            "vat_knowledge_fees"
+          ],
+          "price": 35564,
+          "currency": "AED",
+          "duration": "1 year",
+          "visas_included": 0,
+          "note": "All-inclusive Year 1 package"
+        },
+        {
+          "name": "Flexi Boost",
+          "includes": [
+            "trade_license",
+            "establishment_card",
+            "flexi_desk",
+            "all_fees"
+          ],
+          "price": 43720,
+          "currency": "AED",
+          "duration": "1 year",
+          "visas_included": 0,
+          "note": "1 year, all-inclusive"
+        },
+        {
+          "name": "Flexi Boost 2-Year",
+          "includes": [
+            "trade_license",
+            "establishment_card",
+            "flexi_desk",
+            "all_fees"
+          ],
+          "price": 81861,
+          "currency": "AED",
+          "duration": "2 years",
+          "visas_included": 0,
+          "note": "2 years, all-inclusive"
+        }
+      ],
+      "pros": [
+        "World's #1 free zone — strong international reputation",
+        "100,000+ registered members — excellent networking",
+        "Premium Dubai location in JLT",
+        "Wide range of supported activities",
+        "Multi-year license discounts (10–20%)"
+      ],
+      "cons": [
+        "Higher license fees than budget-friendly zones",
+        "General Trading license significantly more expensive (50,265 AED)",
+        "Physical office required for 3+ visas",
+        "Activity amendment fees (1,515 AED per request)"
+      ]
+    },
+    {
+      "zone_id": "ifza",
+      "zone_name": "IFZA",
+      "zone_type": "freezone",
+      "emirate": "Fujairah",
+      "website": "https://www.ifza.com",
+      "last_scraped": "2026-03-07T11:00:00+04:00",
+      "scrape_confidence": "high",
+      "supported_activities": [
+        "trading",
+        "services",
+        "consulting",
+        "technology",
+        "ecommerce"
+      ],
+      "pricing": {
+        "license_fees": {
+          "trading": {
+            "value": 12500,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "high",
+            "source": "https://www.ifza.com",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "Typical package cost 11,900–14,900 AED. No difference between activity types.",
+            "range": {
+              "low": 12250,
+              "high": 12750
+            }
+          },
+          "services": {
+            "value": 12500,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "high",
+            "source": "https://www.ifza.com",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": null,
+            "range": {
+              "low": 12250,
+              "high": 12750
+            }
+          },
+          "consulting": {
+            "value": 12500,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "high",
+            "source": "https://www.ifza.com",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": null,
+            "range": {
+              "low": 12250,
+              "high": 12750
+            }
+          },
+          "technology": {
+            "value": 12500,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "high",
+            "source": "https://www.ifza.com",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": null,
+            "range": {
+              "low": 12250,
+              "high": 12750
+            }
+          },
+          "ecommerce": {
+            "value": 12500,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "high",
+            "source": "https://www.ifza.com",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": null,
+            "range": {
+              "low": 12250,
+              "high": 12750
+            }
+          }
+        },
+        "visa_costs": {
+          "employment_visa": {
+            "value": 4300,
+            "unit": "AED",
+            "frequency": "per_visa",
+            "confidence": "high",
+            "source": "https://www.ifza.com",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "Total per visa 3,800–4,800. Includes establishment card, entry permit, status change, medical, EID, stamping.",
+            "range": {
+              "low": 4085,
+              "high": 4515
+            }
+          },
+          "medical_fitness": {
+            "value": 350,
+            "unit": "AED",
+            "frequency": "per_visa",
+            "confidence": "high",
+            "source": "https://www.ifza.com",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "300–400 AED range",
+            "range": {
+              "low": 333,
+              "high": 368
+            }
+          },
+          "emirates_id": {
+            "value": 1100,
+            "unit": "AED",
+            "frequency": "per_visa",
+            "confidence": "high",
+            "source": "https://www.ifza.com",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "1,000–1,200 AED range",
+            "range": {
+              "low": 1045,
+              "high": 1155
+            }
+          },
+          "visa_deposit": {
+            "value": 0,
+            "unit": "AED",
+            "frequency": "per_visa",
+            "confidence": "medium",
+            "source": "https://www.ifza.com",
+            "source_type": "aggregated",
+            "last_verified": "2026-03-07",
+            "notes": "No deposit reported for IFZA"
+          }
+        },
+        "office_costs": {
+          "flexi_desk": {
+            "value": 0,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "high",
+            "source": "https://www.ifza.com",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "Included in base license package — no physical office required"
+          },
+          "physical_office": {
+            "value": 8000,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "low",
+            "source": "https://www.ifza.com",
+            "source_type": "third_party",
+            "last_verified": "2026-03-07",
+            "notes": "Optional physical office from 8,000+ AED",
+            "range": {
+              "low": 6000,
+              "high": 10000
+            }
+          }
+        },
+        "government_fees": {
+          "registration_fee": {
+            "value": 0,
+            "unit": "AED",
+            "frequency": "one-time",
+            "confidence": "high",
+            "source": "https://www.ifza.com",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "Included in license package — name reservation, approvals, MOA, share certs all included"
+          },
+          "establishment_card": {
+            "value": 2250,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "high",
+            "source": "https://www.ifza.com",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "2,000–2,500 AED range"
+          }
+        },
+        "pro_fees": {
+          "formation_package": {
+            "value": 0,
+            "unit": "AED",
+            "frequency": "one-time",
+            "confidence": "high",
+            "source": "https://www.ifza.com",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "Digital processing — no PRO needed"
+          },
+          "annual_renewal_assistance": {
+            "value": 0,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "medium",
+            "source": "https://www.ifza.com",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "Online self-service renewal"
+          }
+        },
+        "additional_costs": {
+          "health_insurance": {
+            "value": 1500,
+            "range": {
+              "low": 1000,
+              "high": 2000
+            },
+            "unit": "AED",
+            "frequency": "annual_per_visa",
+            "confidence": "medium",
+            "source": "market_research",
+            "source_type": "aggregated",
+            "last_verified": "2026-03-07",
+            "notes": "Mandatory health insurance per visa holder. Basic plan starts ~AED 1,000; comprehensive ~AED 2,000+."
+          },
+          "corporate_tax_compliance": {
+            "value": 8000,
+            "range": {
+              "low": 5000,
+              "high": 15000
+            },
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "low",
+            "source": "market_research",
+            "source_type": "aggregated",
+            "last_verified": "2026-03-07",
+            "notes": "Audit + tax filing. Applies if revenue > AED 375K. Year 2+ cost."
+          }
+        }
+      },
+      "packages": [
+        {
+          "name": "Standard Package",
+          "includes": [
+            "trade_license",
+            "flexi_desk",
+            "establishment_card",
+            "name_reservation",
+            "moa"
+          ],
+          "price": 12500,
+          "currency": "AED",
+          "duration": "1 year",
+          "visas_included": 0,
+          "note": "Base package — no physical office required"
+        },
+        {
+          "name": "Standard + 1 Visa",
+          "includes": [
+            "trade_license",
+            "flexi_desk",
+            "establishment_card",
+            "1_visa"
+          ],
+          "price": 16800,
+          "currency": "AED",
+          "duration": "1 year",
+          "visas_included": 1,
+          "note": "Most popular package"
+        }
+      ],
+      "pros": [
+        "Very cost-effective — among lowest license fees",
+        "No physical office requirement (virtual/flexi included)",
+        "No share capital requirement",
+        "Fast setup — packages are all-inclusive",
+        "Multi-year savings (20–25% for 3 years)"
+      ],
+      "cons": [
+        "Located in Fujairah (not Dubai)",
+        "Less prestigious than Dubai-based zones",
+        "Limited physical office options",
+        "Newer zone — smaller business community"
+      ]
+    },
+    {
+      "zone_id": "rakez",
+      "zone_name": "RAKEZ",
+      "zone_type": "freezone",
+      "emirate": "Ras Al Khaimah",
+      "website": "https://www.rakez.com",
+      "last_scraped": "2026-03-07T11:00:00+04:00",
+      "scrape_confidence": "high",
+      "supported_activities": [
+        "trading",
+        "services",
+        "consulting",
+        "technology",
+        "ecommerce",
+        "industrial"
+      ],
+      "pricing": {
+        "license_fees": {
+          "trading": {
+            "value": 6000,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "high",
+            "source": "https://www.rakez.com",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "Biz Starter Package (zero visa). General range 6,000–15,000.",
+            "range": {
+              "low": 5880,
+              "high": 6120
+            }
+          },
+          "services": {
+            "value": 6000,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "high",
+            "source": "https://www.rakez.com",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "No cost difference between activity types at base level",
+            "range": {
+              "low": 5880,
+              "high": 6120
+            }
+          },
+          "consulting": {
+            "value": 6000,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "high",
+            "source": "https://www.rakez.com",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": null,
+            "range": {
+              "low": 5880,
+              "high": 6120
+            }
+          },
+          "technology": {
+            "value": 6000,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "high",
+            "source": "https://www.rakez.com",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": null,
+            "range": {
+              "low": 5880,
+              "high": 6120
+            }
+          },
+          "ecommerce": {
+            "value": 6000,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "high",
+            "source": "https://www.rakez.com",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": null,
+            "range": {
+              "low": 5880,
+              "high": 6120
+            }
+          }
+        },
+        "visa_costs": {
+          "employment_visa": {
+            "value": 5500,
+            "unit": "AED",
+            "frequency": "per_visa",
+            "confidence": "medium",
+            "source": "https://www.rakez.com",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "Range 4,000–7,000 AED. Renewable every 2–3 years.",
+            "range": {
+              "low": 4840,
+              "high": 6160
+            }
+          },
+          "medical_fitness": {
+            "value": 500,
+            "unit": "AED",
+            "frequency": "per_visa",
+            "confidence": "medium",
+            "source": "https://www.rakez.com",
+            "source_type": "aggregated",
+            "last_verified": "2026-03-07",
+            "notes": "Standard UAE medical test",
+            "range": {
+              "low": 440,
+              "high": 560
+            }
+          },
+          "emirates_id": {
+            "value": 370,
+            "unit": "AED",
+            "frequency": "per_visa",
+            "confidence": "high",
+            "source": "https://www.rakez.com",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": null,
+            "range": {
+              "low": 352,
+              "high": 389
+            }
+          },
+          "visa_deposit": {
+            "value": 0,
+            "unit": "AED",
+            "frequency": "per_visa",
+            "confidence": "medium",
+            "source": "https://www.rakez.com",
+            "source_type": "aggregated",
+            "last_verified": "2026-03-07",
+            "notes": "No deposit mentioned"
+          }
+        },
+        "office_costs": {
+          "flexi_desk": {
+            "value": 7000,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "high",
+            "source": "https://www.rakez.com",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "Range 6,999–44,999 AED for flexi-desk/shared workspace",
+            "range": {
+              "low": 6650,
+              "high": 7350
+            }
+          },
+          "shared_office": {
+            "value": 25000,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "medium",
+            "source": "https://www.rakez.com",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "Mid-range shared workspace",
+            "range": {
+              "low": 22500,
+              "high": 27500
+            }
+          },
+          "physical_office": {
+            "value": 82400,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "high",
+            "source": "https://www.rakez.com",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "Full commercial office",
+            "range": {
+              "low": 61800,
+              "high": 103000
+            }
+          }
+        },
+        "government_fees": {
+          "registration_fee": {
+            "value": 2000,
+            "unit": "AED",
+            "frequency": "one-time",
+            "confidence": "medium",
+            "source": "https://www.rakez.com",
+            "source_type": "aggregated",
+            "last_verified": "2026-03-07",
+            "notes": "Estimated from package breakdowns"
+          },
+          "establishment_card": {
+            "value": 1500,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "medium",
+            "source": "https://www.rakez.com",
+            "source_type": "aggregated",
+            "last_verified": "2026-03-07",
+            "notes": "Estimated standard rate"
+          }
+        },
+        "pro_fees": {
+          "formation_package": {
+            "value": 0,
+            "unit": "AED",
+            "frequency": "one-time",
+            "confidence": "high",
+            "source": "https://www.rakez.com",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "Portal 360 digital setup — no PRO needed"
+          },
+          "annual_renewal_assistance": {
+            "value": 0,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "medium",
+            "source": "https://www.rakez.com",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "Digital renewal available"
+          }
+        },
+        "additional_costs": {
+          "health_insurance": {
+            "value": 1500,
+            "range": {
+              "low": 1000,
+              "high": 2000
+            },
+            "unit": "AED",
+            "frequency": "annual_per_visa",
+            "confidence": "medium",
+            "source": "market_research",
+            "source_type": "aggregated",
+            "last_verified": "2026-03-07",
+            "notes": "Mandatory health insurance per visa holder. Basic plan starts ~AED 1,000; comprehensive ~AED 2,000+."
+          },
+          "corporate_tax_compliance": {
+            "value": 8000,
+            "range": {
+              "low": 5000,
+              "high": 15000
+            },
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "low",
+            "source": "market_research",
+            "source_type": "aggregated",
+            "last_verified": "2026-03-07",
+            "notes": "Audit + tax filing. Applies if revenue > AED 375K. Year 2+ cost."
+          }
+        }
+      },
+      "packages": [
+        {
+          "name": "Biz Starter",
+          "includes": [
+            "trade_license"
+          ],
+          "price": 6000,
+          "currency": "AED",
+          "duration": "1 year",
+          "visas_included": 0,
+          "note": "Zero-visa starter package"
+        },
+        {
+          "name": "Business Women Package",
+          "includes": [
+            "trade_license"
+          ],
+          "price": 6000,
+          "currency": "AED",
+          "duration": "1 year",
+          "visas_included": 0,
+          "note": "Special package for women entrepreneurs"
+        }
+      ],
+      "pros": [
+        "Among the lowest license fees in UAE (from 6,000 AED)",
+        "Digital setup via Portal 360",
+        "Promotional visa discounts (25% off periods)",
+        "Supports industrial activities",
+        "Competitive office rates"
+      ],
+      "cons": [
+        "Located in Ras Al Khaimah (not Dubai)",
+        "Visa costs higher than some competitors (4,000–7,000)",
+        "Visa packages require custom pricing",
+        "Less prestige than Dubai zones"
+      ]
+    },
+    {
+      "zone_id": "saif",
+      "zone_name": "SAIF Zone",
+      "zone_type": "freezone",
+      "emirate": "Sharjah",
+      "website": "https://www.saif-zone.com",
+      "last_scraped": "2026-03-07T11:00:00+04:00",
+      "scrape_confidence": "medium",
+      "supported_activities": [
+        "trading",
+        "services",
+        "consulting",
+        "technology",
+        "ecommerce",
+        "industrial"
+      ],
+      "pricing": {
+        "license_fees": {
+          "trading": {
+            "value": 7500,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "medium",
+            "source": "https://www.saif-zone.com",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "Annual license fee. Total minimum package 10,800 AED.",
+            "range": {
+              "low": 6900,
+              "high": 8100
+            }
+          },
+          "services": {
+            "value": 7500,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "medium",
+            "source": "https://www.saif-zone.com",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "No activity-type price difference reported",
+            "range": {
+              "low": 6900,
+              "high": 8100
+            }
+          },
+          "consulting": {
+            "value": 7500,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "medium",
+            "source": "https://www.saif-zone.com",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": null,
+            "range": {
+              "low": 6900,
+              "high": 8100
+            }
+          },
+          "technology": {
+            "value": 7500,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "medium",
+            "source": "https://www.saif-zone.com",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": null,
+            "range": {
+              "low": 6900,
+              "high": 8100
+            }
+          },
+          "ecommerce": {
+            "value": 7500,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "medium",
+            "source": "https://www.saif-zone.com",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": null,
+            "range": {
+              "low": 6900,
+              "high": 8100
+            }
+          }
+        },
+        "visa_costs": {
+          "employment_visa": {
+            "value": 12500,
+            "unit": "AED",
+            "frequency": "per_visa",
+            "confidence": "medium",
+            "source": "https://www.saif-zone.com",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "Range 10,000–15,000 AED per additional visa. Higher than most free zones.",
+            "range": {
+              "low": 11000,
+              "high": 14000
+            }
+          },
+          "medical_fitness": {
+            "value": 500,
+            "unit": "AED",
+            "frequency": "per_visa",
+            "confidence": "medium",
+            "source": "https://www.saif-zone.com",
+            "source_type": "aggregated",
+            "last_verified": "2026-03-07",
+            "notes": "Included in visa estimate",
+            "range": {
+              "low": 440,
+              "high": 560
+            }
+          },
+          "emirates_id": {
+            "value": 370,
+            "unit": "AED",
+            "frequency": "per_visa",
+            "confidence": "high",
+            "source": "https://www.saif-zone.com",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "Included in visa estimate",
+            "range": {
+              "low": 352,
+              "high": 389
+            }
+          },
+          "visa_deposit": {
+            "value": 0,
+            "unit": "AED",
+            "frequency": "per_visa",
+            "confidence": "medium",
+            "source": "https://www.saif-zone.com",
+            "source_type": "aggregated",
+            "last_verified": "2026-03-07",
+            "notes": null
+          }
+        },
+        "office_costs": {
+          "flexi_desk": {
+            "value": 3300,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "medium",
+            "source": "https://www.saif-zone.com",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "Annual service charges 3,000 AED. Flexi/basic included in packages.",
+            "range": {
+              "low": 2970,
+              "high": 3630
+            }
+          },
+          "physical_office": {
+            "value": 25000,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "medium",
+            "source": "https://www.saif-zone.com",
+            "source_type": "aggregated",
+            "last_verified": "2026-03-07",
+            "notes": "Full setup with office 25,000–40,000 AED Year 1",
+            "range": {
+              "low": 18750,
+              "high": 31250
+            }
+          }
+        },
+        "government_fees": {
+          "registration_fee": {
+            "value": 2000,
+            "unit": "AED",
+            "frequency": "one-time",
+            "confidence": "medium",
+            "source": "https://www.saif-zone.com",
+            "source_type": "aggregated",
+            "last_verified": "2026-03-07",
+            "notes": "Estimated from package breakdown"
+          },
+          "establishment_card": {
+            "value": 1500,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "medium",
+            "source": "https://www.saif-zone.com",
+            "source_type": "aggregated",
+            "last_verified": "2026-03-07",
+            "notes": null
+          },
+          "share_capital": {
+            "value": 150000,
+            "unit": "AED",
+            "frequency": "one-time",
+            "confidence": "high",
+            "source": "https://www.saif-zone.com",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "Minimum capital for FZE/FZC, payable within first year. May be refundable."
+          }
+        },
+        "pro_fees": {
+          "formation_package": {
+            "value": 2000,
+            "unit": "AED",
+            "frequency": "one-time",
+            "confidence": "medium",
+            "source": "https://www.saif-zone.com",
+            "source_type": "third_party",
+            "last_verified": "2026-03-07",
+            "notes": "Optional PRO assistance"
+          },
+          "annual_renewal_assistance": {
+            "value": 1500,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "medium",
+            "source": "https://www.saif-zone.com",
+            "source_type": "third_party",
+            "last_verified": "2026-03-07",
+            "notes": null
+          }
+        },
+        "additional_costs": {
+          "health_insurance": {
+            "value": 1500,
+            "range": {
+              "low": 1000,
+              "high": 2000
+            },
+            "unit": "AED",
+            "frequency": "annual_per_visa",
+            "confidence": "medium",
+            "source": "market_research",
+            "source_type": "aggregated",
+            "last_verified": "2026-03-07",
+            "notes": "Mandatory health insurance per visa holder. Basic plan starts ~AED 1,000; comprehensive ~AED 2,000+."
+          },
+          "corporate_tax_compliance": {
+            "value": 8000,
+            "range": {
+              "low": 5000,
+              "high": 15000
+            },
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "low",
+            "source": "market_research",
+            "source_type": "aggregated",
+            "last_verified": "2026-03-07",
+            "notes": "Audit + tax filing. Applies if revenue > AED 375K. Year 2+ cost."
+          }
+        }
+      },
+      "packages": [
+        {
+          "name": "Minimum Package",
+          "includes": [
+            "trade_license",
+            "service_charges"
+          ],
+          "price": 10800,
+          "currency": "AED",
+          "duration": "1 year",
+          "visas_included": 0,
+          "note": "License 7,500 + service charges 3,000 + misc"
+        }
+      ],
+      "pros": [
+        "Competitive license fees (from 7,500 AED)",
+        "Fast license issuance (as fast as 1 working day)",
+        "Sharjah location — close to Dubai",
+        "Supports industrial activities"
+      ],
+      "cons": [
+        "Minimum share capital of 150,000 AED (FZE/FZC)",
+        "Higher visa costs than competitors (10,000–15,000 per visa)",
+        "Limited detailed pricing transparency",
+        "Less popular than Dubai-based zones"
+      ]
+    },
+    {
+      "zone_id": "dso",
+      "zone_name": "Dubai Silicon Oasis",
+      "zone_type": "freezone",
+      "emirate": "Dubai",
+      "website": "https://www.dsoa.ae",
+      "last_scraped": "2026-03-07T11:00:00+04:00",
+      "scrape_confidence": "medium",
+      "supported_activities": [
+        "trading",
+        "services",
+        "consulting",
+        "technology",
+        "ecommerce"
+      ],
+      "pricing": {
+        "license_fees": {
+          "trading": {
+            "value": 16000,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "medium",
+            "source": "https://www.dsoa.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "Range 12,000–20,000 AED for commercial",
+            "range": {
+              "low": 14720,
+              "high": 17280
+            }
+          },
+          "services": {
+            "value": 13500,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "medium",
+            "source": "https://www.dsoa.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "Service/e-commerce around 12,000–15,000",
+            "range": {
+              "low": 12420,
+              "high": 14580
+            }
+          },
+          "consulting": {
+            "value": 13500,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "medium",
+            "source": "https://www.dsoa.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": null,
+            "range": {
+              "low": 12420,
+              "high": 14580
+            }
+          },
+          "technology": {
+            "value": 12000,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "medium",
+            "source": "https://www.dsoa.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "Basic license (2 visas included)",
+            "range": {
+              "low": 11040,
+              "high": 12960
+            }
+          },
+          "ecommerce": {
+            "value": 15000,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "medium",
+            "source": "https://www.dsoa.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "Service/e-commerce license",
+            "range": {
+              "low": 13800,
+              "high": 16200
+            }
+          }
+        },
+        "visa_costs": {
+          "employment_visa": {
+            "value": 4860,
+            "unit": "AED",
+            "frequency": "per_visa",
+            "confidence": "high",
+            "source": "https://www.dsoa.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "For applicants already in UAE. Outside UAE: 3,260 AED.",
+            "range": {
+              "low": 4617,
+              "high": 5103
+            }
+          },
+          "medical_fitness": {
+            "value": 650,
+            "unit": "AED",
+            "frequency": "per_visa",
+            "confidence": "high",
+            "source": "https://www.dsoa.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": null,
+            "range": {
+              "low": 618,
+              "high": 683
+            }
+          },
+          "emirates_id": {
+            "value": 330,
+            "unit": "AED",
+            "frequency": "per_visa",
+            "confidence": "high",
+            "source": "https://www.dsoa.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": null,
+            "range": {
+              "low": 314,
+              "high": 347
+            }
+          },
+          "visa_deposit": {
+            "value": 2500,
+            "unit": "AED",
+            "frequency": "per_visa",
+            "confidence": "high",
+            "source": "https://www.dsoa.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "Refundable deposit",
+            "range": {
+              "low": 2375,
+              "high": 2625
+            }
+          }
+        },
+        "office_costs": {
+          "flexi_desk": {
+            "value": 0,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "high",
+            "source": "https://www.dsoa.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "No flexi-desk option — physical office mandatory"
+          },
+          "physical_office": {
+            "value": 28392,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "high",
+            "source": "https://www.dsoa.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "Smallest office (13.5 sqm). Deposit 2,704 AED.",
+            "range": {
+              "low": 21294,
+              "high": 35490
+            }
+          }
+        },
+        "government_fees": {
+          "registration_fee": {
+            "value": 2000,
+            "unit": "AED",
+            "frequency": "one-time",
+            "confidence": "medium",
+            "source": "https://www.dsoa.ae",
+            "source_type": "aggregated",
+            "last_verified": "2026-03-07",
+            "notes": "Estimated"
+          },
+          "establishment_card": {
+            "value": 1500,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "medium",
+            "source": "https://www.dsoa.ae",
+            "source_type": "aggregated",
+            "last_verified": "2026-03-07",
+            "notes": null
+          },
+          "office_deposit": {
+            "value": 2704,
+            "unit": "AED",
+            "frequency": "one-time",
+            "confidence": "high",
+            "source": "https://www.dsoa.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "Refundable office deposit"
+          }
+        },
+        "pro_fees": {
+          "formation_package": {
+            "value": 3000,
+            "unit": "AED",
+            "frequency": "one-time",
+            "confidence": "medium",
+            "source": "https://www.dsoa.ae",
+            "source_type": "third_party",
+            "last_verified": "2026-03-07",
+            "notes": "Optional PRO assistance"
+          },
+          "annual_renewal_assistance": {
+            "value": 2000,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "medium",
+            "source": "https://www.dsoa.ae",
+            "source_type": "third_party",
+            "last_verified": "2026-03-07",
+            "notes": "Can be handled remotely"
+          }
+        },
+        "additional_costs": {
+          "health_insurance": {
+            "value": 1500,
+            "range": {
+              "low": 1000,
+              "high": 2000
+            },
+            "unit": "AED",
+            "frequency": "annual_per_visa",
+            "confidence": "medium",
+            "source": "market_research",
+            "source_type": "aggregated",
+            "last_verified": "2026-03-07",
+            "notes": "Mandatory health insurance per visa holder. Basic plan starts ~AED 1,000; comprehensive ~AED 2,000+."
+          },
+          "corporate_tax_compliance": {
+            "value": 8000,
+            "range": {
+              "low": 5000,
+              "high": 15000
+            },
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "low",
+            "source": "market_research",
+            "source_type": "aggregated",
+            "last_verified": "2026-03-07",
+            "notes": "Audit + tax filing. Applies if revenue > AED 375K. Year 2+ cost."
+          }
+        }
+      },
+      "packages": [],
+      "pros": [
+        "Dubai location — tech-focused zone",
+        "Well-established tech ecosystem",
+        "Good infrastructure for technology companies",
+        "Reasonable license fees"
+      ],
+      "cons": [
+        "Physical office mandatory — no flexi-desk option",
+        "Higher total setup cost (50,000+ AED minimum)",
+        "Office deposit required (2,704 AED)",
+        "Visa deposit required (2,500 AED per visa)"
+      ]
+    },
+    {
+      "zone_id": "difc",
+      "zone_name": "DIFC",
+      "zone_type": "freezone",
+      "emirate": "Dubai",
+      "website": "https://www.difc.ae",
+      "last_scraped": "2026-03-07T11:00:00+04:00",
+      "scrape_confidence": "low",
+      "supported_activities": [
+        "services",
+        "consulting",
+        "technology",
+        "financial_services"
+      ],
+      "pricing": {
+        "license_fees": {
+          "services": {
+            "value": 30000,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "low",
+            "source": "https://www.difc.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "Non-regulated: 10,000–50,000+ AED. Using midpoint. Highly variable.",
+            "range": {
+              "low": 27600,
+              "high": 32400
+            }
+          },
+          "consulting": {
+            "value": 25000,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "low",
+            "source": "https://www.difc.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "Non-regulated consulting/professional services",
+            "range": {
+              "low": 23000,
+              "high": 27000
+            }
+          },
+          "technology": {
+            "value": 5500,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "medium",
+            "source": "https://www.difc.ae",
+            "source_type": "third_party",
+            "last_verified": "2026-03-07",
+            "notes": "Tech promotions from Creative Zone: USD 1,500/year for 5 years",
+            "range": {
+              "low": 5060,
+              "high": 5940
+            }
+          },
+          "financial_services": {
+            "value": 150000,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "low",
+            "source": "https://www.difc.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "DFSA approval USD 15,000–70,000. Highly variable by regulation category.",
+            "range": {
+              "low": 138000,
+              "high": 162000
+            }
+          }
+        },
+        "visa_costs": {
+          "employment_visa": {
+            "value": 5000,
+            "unit": "AED",
+            "frequency": "per_visa",
+            "confidence": "medium",
+            "source": "https://www.difc.ae",
+            "source_type": "aggregated",
+            "last_verified": "2026-03-07",
+            "notes": "Standard UAE visa costs apply",
+            "range": {
+              "low": 4400,
+              "high": 5600
+            }
+          },
+          "medical_fitness": {
+            "value": 500,
+            "unit": "AED",
+            "frequency": "per_visa",
+            "confidence": "medium",
+            "source": "https://www.difc.ae",
+            "source_type": "aggregated",
+            "last_verified": "2026-03-07",
+            "notes": null,
+            "range": {
+              "low": 440,
+              "high": 560
+            }
+          },
+          "emirates_id": {
+            "value": 370,
+            "unit": "AED",
+            "frequency": "per_visa",
+            "confidence": "high",
+            "source": "https://www.difc.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": null,
+            "range": {
+              "low": 352,
+              "high": 389
+            }
+          },
+          "visa_deposit": {
+            "value": 0,
+            "unit": "AED",
+            "frequency": "per_visa",
+            "confidence": "low",
+            "source": "https://www.difc.ae",
+            "source_type": "aggregated",
+            "last_verified": "2026-03-07",
+            "notes": "Not specified"
+          }
+        },
+        "office_costs": {
+          "flexi_desk": {
+            "value": 0,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "low",
+            "source": "https://www.difc.ae",
+            "source_type": "aggregated",
+            "last_verified": "2026-03-07",
+            "notes": "No flexi-desk commonly available at DIFC"
+          },
+          "coworking": {
+            "value": 22000,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "medium",
+            "source": "https://www.difc.ae",
+            "source_type": "third_party",
+            "last_verified": "2026-03-07",
+            "notes": "Co-working subsidies from Creative Zone: USD 500/month",
+            "range": {
+              "low": 19800,
+              "high": 24200
+            }
+          },
+          "physical_office": {
+            "value": 80000,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "low",
+            "source": "https://www.difc.ae",
+            "source_type": "aggregated",
+            "last_verified": "2026-03-07",
+            "notes": "Major cost component. Varies significantly by size and floor.",
+            "range": {
+              "low": 60000,
+              "high": 100000
+            }
+          }
+        },
+        "government_fees": {
+          "registration_fee": {
+            "value": 5000,
+            "unit": "AED",
+            "frequency": "one-time",
+            "confidence": "low",
+            "source": "https://www.difc.ae",
+            "source_type": "aggregated",
+            "last_verified": "2026-03-07",
+            "notes": "Variable by license type"
+          },
+          "establishment_card": {
+            "value": 2000,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "low",
+            "source": "https://www.difc.ae",
+            "source_type": "aggregated",
+            "last_verified": "2026-03-07",
+            "notes": null
+          }
+        },
+        "pro_fees": {
+          "formation_package": {
+            "value": 8000,
+            "unit": "AED",
+            "frequency": "one-time",
+            "confidence": "low",
+            "source": "https://www.difc.ae",
+            "source_type": "third_party",
+            "last_verified": "2026-03-07",
+            "notes": "Complex setup — PRO strongly recommended"
+          },
+          "annual_renewal_assistance": {
+            "value": 5000,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "low",
+            "source": "https://www.difc.ae",
+            "source_type": "third_party",
+            "last_verified": "2026-03-07",
+            "notes": null
+          }
+        },
+        "additional_costs": {
+          "health_insurance": {
+            "value": 1500,
+            "range": {
+              "low": 1000,
+              "high": 2000
+            },
+            "unit": "AED",
+            "frequency": "annual_per_visa",
+            "confidence": "medium",
+            "source": "market_research",
+            "source_type": "aggregated",
+            "last_verified": "2026-03-07",
+            "notes": "Mandatory health insurance per visa holder. Basic plan starts ~AED 1,000; comprehensive ~AED 2,000+."
+          },
+          "corporate_tax_compliance": {
+            "value": 8000,
+            "range": {
+              "low": 5000,
+              "high": 15000
+            },
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "low",
+            "source": "market_research",
+            "source_type": "aggregated",
+            "last_verified": "2026-03-07",
+            "notes": "Audit + tax filing. Applies if revenue > AED 375K. Year 2+ cost."
+          }
+        }
+      },
+      "packages": [],
+      "pros": [
+        "Prestigious international financial centre",
+        "English common law jurisdiction (DIFC Courts)",
+        "Best for financial services, fintech, legal, consulting",
+        "Strong investor and talent network",
+        "Tax-exempt qualifying income"
+      ],
+      "cons": [
+        "Highest setup costs among UAE free zones",
+        "Regulated activities require DFSA approval (4–6 months)",
+        "Office space is the major cost driver",
+        "Vague/variable pricing — hard to estimate accurately",
+        "Not suitable for trading or e-commerce"
+      ]
+    },
+    {
+      "zone_id": "adgm",
+      "zone_name": "ADGM",
+      "zone_type": "freezone",
+      "emirate": "Abu Dhabi",
+      "website": "https://www.adgm.com",
+      "last_scraped": "2026-03-07T11:00:00+04:00",
+      "scrape_confidence": "high",
+      "supported_activities": [
+        "services",
+        "consulting",
+        "technology",
+        "financial_services",
+        "retail"
+      ],
+      "pricing": {
+        "license_fees": {
+          "services": {
+            "value": 20000,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "high",
+            "source": "https://www.adgm.com",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "Non-Financial: USD 5,000–5,500 initial, USD 5,000 annual. Using USD 5,250 ≈ 19,270 AED rounded.",
+            "range": {
+              "low": 19600,
+              "high": 20400
+            }
+          },
+          "consulting": {
+            "value": 20000,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "high",
+            "source": "https://www.adgm.com",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "Non-Financial category",
+            "range": {
+              "low": 19600,
+              "high": 20400
+            }
+          },
+          "technology": {
+            "value": 5500,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "high",
+            "source": "https://www.adgm.com",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "Tech/Fintech Startups: USD 1,500 ≈ 5,500 AED",
+            "range": {
+              "low": 5390,
+              "high": 5610
+            }
+          },
+          "retail": {
+            "value": 7500,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "high",
+            "source": "https://www.adgm.com",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "Retail: USD 2,000–2,500. Using midpoint.",
+            "range": {
+              "low": 7350,
+              "high": 7650
+            }
+          },
+          "financial_services": {
+            "value": 62000,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "high",
+            "source": "https://www.adgm.com",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "Financial: USD 16,700–20,000 initial. Using USD 16,700 ≈ 61,330 AED rounded.",
+            "range": {
+              "low": 60760,
+              "high": 63240
+            }
+          },
+          "spv": {
+            "value": 7000,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "high",
+            "source": "https://www.adgm.com",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "Special Purpose Vehicle: USD 1,900",
+            "range": {
+              "low": 6860,
+              "high": 7140
+            }
+          }
+        },
+        "visa_costs": {
+          "employment_visa": {
+            "value": 5000,
+            "unit": "AED",
+            "frequency": "per_visa",
+            "confidence": "low",
+            "source": "https://www.adgm.com",
+            "source_type": "aggregated",
+            "last_verified": "2026-03-07",
+            "notes": "Not specified in ADGM sources. Using standard UAE estimate.",
+            "range": {
+              "low": 4000,
+              "high": 6000
+            }
+          },
+          "medical_fitness": {
+            "value": 500,
+            "unit": "AED",
+            "frequency": "per_visa",
+            "confidence": "medium",
+            "source": "https://www.adgm.com",
+            "source_type": "aggregated",
+            "last_verified": "2026-03-07",
+            "notes": "Standard UAE rate",
+            "range": {
+              "low": 440,
+              "high": 560
+            }
+          },
+          "emirates_id": {
+            "value": 370,
+            "unit": "AED",
+            "frequency": "per_visa",
+            "confidence": "high",
+            "source": "https://www.adgm.com",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": null,
+            "range": {
+              "low": 352,
+              "high": 389
+            }
+          },
+          "visa_deposit": {
+            "value": 0,
+            "unit": "AED",
+            "frequency": "per_visa",
+            "confidence": "low",
+            "source": "https://www.adgm.com",
+            "source_type": "aggregated",
+            "last_verified": "2026-03-07",
+            "notes": "Not specified"
+          }
+        },
+        "office_costs": {
+          "flexi_desk": {
+            "value": 0,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "low",
+            "source": "https://www.adgm.com",
+            "source_type": "aggregated",
+            "last_verified": "2026-03-07",
+            "notes": "Not specified — market rates apply"
+          },
+          "physical_office": {
+            "value": 55000,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "medium",
+            "source": "https://www.adgm.com",
+            "source_type": "aggregated",
+            "last_verified": "2026-03-07",
+            "notes": "USD 40–60/sq ft annually. Using ~200 sq ft at USD 50 = USD 10,000 ≈ 36,700 AED. Larger offices much more.",
+            "range": {
+              "low": 41250,
+              "high": 68750
+            }
+          }
+        },
+        "government_fees": {
+          "name_reservation": {
+            "value": 735,
+            "unit": "AED",
+            "frequency": "one-time",
+            "confidence": "high",
+            "source": "https://www.adgm.com",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "USD 200 ≈ 735 AED"
+          },
+          "incorporation": {
+            "value": 5510,
+            "unit": "AED",
+            "frequency": "one-time",
+            "confidence": "high",
+            "source": "https://www.adgm.com",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "USD 1,500"
+          },
+          "initial_license": {
+            "value": 14700,
+            "unit": "AED",
+            "frequency": "one-time",
+            "confidence": "high",
+            "source": "https://www.adgm.com",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "USD 4,000"
+          },
+          "annual_license": {
+            "value": 14700,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "high",
+            "source": "https://www.adgm.com",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "USD 4,000 annual"
+          }
+        },
+        "pro_fees": {
+          "formation_package": {
+            "value": 5000,
+            "unit": "AED",
+            "frequency": "one-time",
+            "confidence": "medium",
+            "source": "https://www.adgm.com",
+            "source_type": "third_party",
+            "last_verified": "2026-03-07",
+            "notes": "Optional PRO assistance"
+          },
+          "annual_renewal_assistance": {
+            "value": 3000,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "medium",
+            "source": "https://www.adgm.com",
+            "source_type": "third_party",
+            "last_verified": "2026-03-07",
+            "notes": null
+          }
+        },
+        "additional_costs": {
+          "health_insurance": {
+            "value": 1500,
+            "range": {
+              "low": 1000,
+              "high": 2000
+            },
+            "unit": "AED",
+            "frequency": "annual_per_visa",
+            "confidence": "medium",
+            "source": "market_research",
+            "source_type": "aggregated",
+            "last_verified": "2026-03-07",
+            "notes": "Mandatory health insurance per visa holder. Basic plan starts ~AED 1,000; comprehensive ~AED 2,000+."
+          },
+          "corporate_tax_compliance": {
+            "value": 8000,
+            "range": {
+              "low": 5000,
+              "high": 15000
+            },
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "low",
+            "source": "market_research",
+            "source_type": "aggregated",
+            "last_verified": "2026-03-07",
+            "notes": "Audit + tax filing. Applies if revenue > AED 375K. Year 2+ cost."
+          }
+        }
+      },
+      "packages": [],
+      "pros": [
+        "English common law jurisdiction (like DIFC)",
+        "Very competitive tech/fintech startup rates (USD 1,500)",
+        "Growing reputation in Abu Dhabi",
+        "Golden Visa access",
+        "Strong regulatory framework"
+      ],
+      "cons": [
+        "Abu Dhabi location (not Dubai)",
+        "USD-denominated fees",
+        "Visa costs not well documented",
+        "Office space at premium market rates",
+        "Newer than DIFC — smaller ecosystem"
+      ]
+    },
+    {
+      "zone_id": "ajman",
+      "zone_name": "Ajman Free Zone",
+      "zone_type": "freezone",
+      "emirate": "Ajman",
+      "website": "https://www.ajmanfreezone.ae",
+      "last_scraped": "2026-03-07T11:00:00+04:00",
+      "scrape_confidence": "high",
+      "supported_activities": [
+        "trading",
+        "services",
+        "consulting",
+        "technology",
+        "ecommerce"
+      ],
+      "pricing": {
+        "license_fees": {
+          "trading": {
+            "value": 13535,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "high",
+            "source": "https://www.ajmanfreezone.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "Trading package — includes 1 visa",
+            "range": {
+              "low": 13264,
+              "high": 13806
+            }
+          },
+          "services": {
+            "value": 16135,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "high",
+            "source": "https://www.ajmanfreezone.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "Service package — includes 1 visa. ~2,600 AED more than trading.",
+            "range": {
+              "low": 15812,
+              "high": 16458
+            }
+          },
+          "consulting": {
+            "value": 16135,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "high",
+            "source": "https://www.ajmanfreezone.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "Falls under service package",
+            "range": {
+              "low": 15812,
+              "high": 16458
+            }
+          },
+          "technology": {
+            "value": 6000,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "high",
+            "source": "https://www.ajmanfreezone.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "Freelance/pioneer package for individuals",
+            "range": {
+              "low": 5880,
+              "high": 6120
+            }
+          },
+          "ecommerce": {
+            "value": 6000,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "high",
+            "source": "https://www.ajmanfreezone.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "Freelance package",
+            "range": {
+              "low": 5880,
+              "high": 6120
+            }
+          }
+        },
+        "visa_costs": {
+          "employment_visa": {
+            "value": 4250,
+            "unit": "AED",
+            "frequency": "per_visa",
+            "confidence": "medium",
+            "source": "https://www.ajmanfreezone.ae",
+            "source_type": "aggregated",
+            "last_verified": "2026-03-07",
+            "notes": "Estimated 3,500–5,000 AED per additional visa. 1 visa included in trading/service packages.",
+            "range": {
+              "low": 3740,
+              "high": 4760
+            }
+          },
+          "medical_fitness": {
+            "value": 500,
+            "unit": "AED",
+            "frequency": "per_visa",
+            "confidence": "medium",
+            "source": "https://www.ajmanfreezone.ae",
+            "source_type": "aggregated",
+            "last_verified": "2026-03-07",
+            "notes": "Standard UAE rate",
+            "range": {
+              "low": 440,
+              "high": 560
+            }
+          },
+          "emirates_id": {
+            "value": 370,
+            "unit": "AED",
+            "frequency": "per_visa",
+            "confidence": "high",
+            "source": "https://www.ajmanfreezone.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": null,
+            "range": {
+              "low": 352,
+              "high": 389
+            }
+          },
+          "visa_deposit": {
+            "value": 0,
+            "unit": "AED",
+            "frequency": "per_visa",
+            "confidence": "medium",
+            "source": "https://www.ajmanfreezone.ae",
+            "source_type": "aggregated",
+            "last_verified": "2026-03-07",
+            "notes": null
+          }
+        },
+        "office_costs": {
+          "flexi_desk": {
+            "value": 0,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "high",
+            "source": "https://www.ajmanfreezone.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "Included in packages — co-working/flexi-desk included"
+          },
+          "physical_office": {
+            "value": 15000,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "medium",
+            "source": "https://www.ajmanfreezone.ae",
+            "source_type": "aggregated",
+            "last_verified": "2026-03-07",
+            "notes": "Estimated — not detailed in sources",
+            "range": {
+              "low": 11250,
+              "high": 18750
+            }
+          }
+        },
+        "government_fees": {
+          "registration_fee": {
+            "value": 0,
+            "unit": "AED",
+            "frequency": "one-time",
+            "confidence": "high",
+            "source": "https://www.ajmanfreezone.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "Included in packages — commercial registry, MOA, incorporation cert all included"
+          },
+          "establishment_card": {
+            "value": 0,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "high",
+            "source": "https://www.ajmanfreezone.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "Included in packages"
+          }
+        },
+        "pro_fees": {
+          "formation_package": {
+            "value": 0,
+            "unit": "AED",
+            "frequency": "one-time",
+            "confidence": "high",
+            "source": "https://www.ajmanfreezone.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "All-inclusive packages — no separate PRO needed"
+          },
+          "annual_renewal_assistance": {
+            "value": 0,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "medium",
+            "source": "https://www.ajmanfreezone.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": null
+          }
+        },
+        "additional_costs": {
+          "health_insurance": {
+            "value": 1500,
+            "range": {
+              "low": 1000,
+              "high": 2000
+            },
+            "unit": "AED",
+            "frequency": "annual_per_visa",
+            "confidence": "medium",
+            "source": "market_research",
+            "source_type": "aggregated",
+            "last_verified": "2026-03-07",
+            "notes": "Mandatory health insurance per visa holder. Basic plan starts ~AED 1,000; comprehensive ~AED 2,000+."
+          },
+          "corporate_tax_compliance": {
+            "value": 8000,
+            "range": {
+              "low": 5000,
+              "high": 15000
+            },
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "low",
+            "source": "market_research",
+            "source_type": "aggregated",
+            "last_verified": "2026-03-07",
+            "notes": "Audit + tax filing. Applies if revenue > AED 375K. Year 2+ cost."
+          }
+        }
+      },
+      "packages": [
+        {
+          "name": "Pioneer Package",
+          "includes": [
+            "trade_license",
+            "flexi_desk"
+          ],
+          "price": 5000,
+          "currency": "AED",
+          "duration": "1 year",
+          "visas_included": 0,
+          "note": "For ages 20–30"
+        },
+        {
+          "name": "Freelance Package",
+          "includes": [
+            "trade_license",
+            "flexi_desk"
+          ],
+          "price": 6000,
+          "currency": "AED",
+          "duration": "1 year",
+          "visas_included": 0,
+          "note": null
+        },
+        {
+          "name": "Trading Package",
+          "includes": [
+            "trade_license",
+            "flexi_desk",
+            "1_visa",
+            "registration"
+          ],
+          "price": 13535,
+          "currency": "AED",
+          "duration": "1 year",
+          "visas_included": 1,
+          "note": "All-inclusive trading"
+        },
+        {
+          "name": "Service Package",
+          "includes": [
+            "trade_license",
+            "flexi_desk",
+            "1_visa",
+            "registration"
+          ],
+          "price": 16135,
+          "currency": "AED",
+          "duration": "1 year",
+          "visas_included": 1,
+          "note": "All-inclusive service"
+        }
+      ],
+      "pros": [
+        "Very affordable packages (from 5,000 AED)",
+        "Pioneer package for young entrepreneurs (20–30 age)",
+        "Flexible payment plans (2, 3, or 6 month installments)",
+        "All-inclusive packages — no hidden fees",
+        "Fast processing"
+      ],
+      "cons": [
+        "Ajman location (not Dubai)",
+        "Service license is pricier than trading (16,135 vs 13,535)",
+        "Limited prestige compared to Dubai zones",
+        "Fewer networking opportunities"
+      ]
+    },
+    {
+      "zone_id": "meydan",
+      "zone_name": "Meydan Free Zone",
+      "zone_type": "freezone",
+      "emirate": "Dubai",
+      "website": "https://www.meydanfz.ae",
+      "last_scraped": "2026-03-07T11:00:00+04:00",
+      "scrape_confidence": "high",
+      "supported_activities": [
+        "trading",
+        "services",
+        "consulting",
+        "technology",
+        "ecommerce",
+        "media",
+        "holding"
+      ],
+      "pricing": {
+        "license_fees": {
+          "trading": {
+            "value": 12500,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "high",
+            "source": "https://www.meydanfz.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "Basic/Standard package — up to 3 activities, 0 visas, flexi-desk included",
+            "range": {
+              "low": 12250,
+              "high": 12750
+            }
+          },
+          "services": {
+            "value": 12500,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "high",
+            "source": "https://www.meydanfz.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "No activity-type price difference",
+            "range": {
+              "low": 12250,
+              "high": 12750
+            }
+          },
+          "consulting": {
+            "value": 12500,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "high",
+            "source": "https://www.meydanfz.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": null,
+            "range": {
+              "low": 12250,
+              "high": 12750
+            }
+          },
+          "technology": {
+            "value": 12500,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "high",
+            "source": "https://www.meydanfz.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": null,
+            "range": {
+              "low": 12250,
+              "high": 12750
+            }
+          },
+          "ecommerce": {
+            "value": 12500,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "high",
+            "source": "https://www.meydanfz.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": null,
+            "range": {
+              "low": 12250,
+              "high": 12750
+            }
+          }
+        },
+        "visa_costs": {
+          "employment_visa": {
+            "value": 1850,
+            "unit": "AED",
+            "frequency": "per_visa",
+            "confidence": "high",
+            "source": "https://www.meydanfz.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "Calculated from package differences: (14,350 - 12,500) = 1,850 per visa bundled",
+            "range": {
+              "low": 1758,
+              "high": 1943
+            }
+          },
+          "medical_fitness": {
+            "value": 0,
+            "unit": "AED",
+            "frequency": "per_visa",
+            "confidence": "medium",
+            "source": "https://www.meydanfz.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "Likely included in bundled visa price"
+          },
+          "emirates_id": {
+            "value": 0,
+            "unit": "AED",
+            "frequency": "per_visa",
+            "confidence": "medium",
+            "source": "https://www.meydanfz.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "Likely included in bundled visa price"
+          },
+          "visa_deposit": {
+            "value": 0,
+            "unit": "AED",
+            "frequency": "per_visa",
+            "confidence": "medium",
+            "source": "https://www.meydanfz.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": null
+          }
+        },
+        "office_costs": {
+          "flexi_desk": {
+            "value": 0,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "high",
+            "source": "https://www.meydanfz.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "Included in all packages at no additional cost"
+          },
+          "physical_office": {
+            "value": 25000,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "low",
+            "source": "https://www.meydanfz.ae",
+            "source_type": "aggregated",
+            "last_verified": "2026-03-07",
+            "notes": "Optional add-on — pricing not detailed in sources",
+            "range": {
+              "low": 18750,
+              "high": 31250
+            }
+          }
+        },
+        "government_fees": {
+          "registration_fee": {
+            "value": 0,
+            "unit": "AED",
+            "frequency": "one-time",
+            "confidence": "high",
+            "source": "https://www.meydanfz.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "Included in package pricing"
+          },
+          "renewal_government_fee": {
+            "value": 3900,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "high",
+            "source": "https://www.meydanfz.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "From 2024 onward"
+          }
+        },
+        "pro_fees": {
+          "formation_package": {
+            "value": 0,
+            "unit": "AED",
+            "frequency": "one-time",
+            "confidence": "high",
+            "source": "https://www.meydanfz.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "All-inclusive packages — no separate PRO needed"
+          },
+          "annual_renewal_assistance": {
+            "value": 0,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "medium",
+            "source": "https://www.meydanfz.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": null
+          }
+        },
+        "additional_costs": {
+          "health_insurance": {
+            "value": 1500,
+            "range": {
+              "low": 1000,
+              "high": 2000
+            },
+            "unit": "AED",
+            "frequency": "annual_per_visa",
+            "confidence": "medium",
+            "source": "market_research",
+            "source_type": "aggregated",
+            "last_verified": "2026-03-07",
+            "notes": "Mandatory health insurance per visa holder. Basic plan starts ~AED 1,000; comprehensive ~AED 2,000+."
+          },
+          "corporate_tax_compliance": {
+            "value": 8000,
+            "range": {
+              "low": 5000,
+              "high": 15000
+            },
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "low",
+            "source": "market_research",
+            "source_type": "aggregated",
+            "last_verified": "2026-03-07",
+            "notes": "Audit + tax filing. Applies if revenue > AED 375K. Year 2+ cost."
+          }
+        }
+      },
+      "packages": [
+        {
+          "name": "Basic/Standard",
+          "includes": [
+            "trade_license",
+            "flexi_desk",
+            "up_to_3_activities"
+          ],
+          "price": 12500,
+          "currency": "AED",
+          "duration": "1 year",
+          "visas_included": 0,
+          "note": null
+        },
+        {
+          "name": "+1 Visa Package",
+          "includes": [
+            "trade_license",
+            "flexi_desk",
+            "up_to_3_activities",
+            "1_visa"
+          ],
+          "price": 14350,
+          "currency": "AED",
+          "duration": "1 year",
+          "visas_included": 1,
+          "note": null
+        },
+        {
+          "name": "+6 Visa Package",
+          "includes": [
+            "trade_license",
+            "flexi_desk",
+            "up_to_3_activities",
+            "6_visas"
+          ],
+          "price": 23600,
+          "currency": "AED",
+          "duration": "1 year",
+          "visas_included": 6,
+          "note": "Best value for teams"
+        },
+        {
+          "name": "Instant (Fawri) Setup",
+          "includes": [
+            "trade_license",
+            "flexi_desk",
+            "instant_processing"
+          ],
+          "price": 15000,
+          "currency": "AED",
+          "duration": "1 year",
+          "visas_included": 0,
+          "note": "Same-day license issuance"
+        }
+      ],
+      "pros": [
+        "Dubai location at competitive price",
+        "Flexi-desk included in all packages",
+        "No activity-type price difference",
+        "Excellent visa-per-AED ratio (6 visas for 23,600)",
+        "Instant (Fawri) setup available",
+        "Supports wide range of activities including media and holding"
+      ],
+      "cons": [
+        "Government renewal fee of 3,900 AED (from 2024)",
+        "Newer zone — building reputation",
+        "Physical office pricing unclear",
+        "Up to 3 activities per license"
+      ]
+    },
+    {
+      "zone_id": "shams",
+      "zone_name": "Sharjah Media City (Shams)",
+      "zone_type": "freezone",
+      "emirate": "Sharjah",
+      "website": "https://www.shams.ae",
+      "last_scraped": "2026-03-07T11:00:00+04:00",
+      "scrape_confidence": "medium",
+      "supported_activities": [
+        "trading",
+        "services",
+        "consulting",
+        "technology",
+        "ecommerce",
+        "media"
+      ],
+      "pricing": {
+        "license_fees": {
+          "trading": {
+            "value": 8500,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "medium",
+            "source": "https://www.shams.ae",
+            "source_type": "third_party",
+            "last_verified": "2026-03-07",
+            "notes": "From Virtuzone comparison data",
+            "range": {
+              "low": 7820,
+              "high": 9180
+            }
+          },
+          "services": {
+            "value": 8500,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "medium",
+            "source": "https://www.shams.ae",
+            "source_type": "third_party",
+            "last_verified": "2026-03-07",
+            "notes": null,
+            "range": {
+              "low": 7820,
+              "high": 9180
+            }
+          },
+          "consulting": {
+            "value": 8500,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "medium",
+            "source": "https://www.shams.ae",
+            "source_type": "third_party",
+            "last_verified": "2026-03-07",
+            "notes": null,
+            "range": {
+              "low": 7820,
+              "high": 9180
+            }
+          },
+          "technology": {
+            "value": 8500,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "medium",
+            "source": "https://www.shams.ae",
+            "source_type": "third_party",
+            "last_verified": "2026-03-07",
+            "notes": null,
+            "range": {
+              "low": 7820,
+              "high": 9180
+            }
+          },
+          "ecommerce": {
+            "value": 8500,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "medium",
+            "source": "https://www.shams.ae",
+            "source_type": "third_party",
+            "last_verified": "2026-03-07",
+            "notes": null,
+            "range": {
+              "low": 7820,
+              "high": 9180
+            }
+          },
+          "media": {
+            "value": 8500,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "medium",
+            "source": "https://www.shams.ae",
+            "source_type": "third_party",
+            "last_verified": "2026-03-07",
+            "notes": "Media-focused zone",
+            "range": {
+              "low": 7820,
+              "high": 9180
+            }
+          }
+        },
+        "visa_costs": {
+          "employment_visa": {
+            "value": 3500,
+            "unit": "AED",
+            "frequency": "per_visa",
+            "confidence": "medium",
+            "source": "https://www.shams.ae",
+            "source_type": "third_party",
+            "last_verified": "2026-03-07",
+            "notes": "From Virtuzone comparison",
+            "range": {
+              "low": 3080,
+              "high": 3920
+            }
+          },
+          "medical_fitness": {
+            "value": 500,
+            "unit": "AED",
+            "frequency": "per_visa",
+            "confidence": "medium",
+            "source": "https://www.shams.ae",
+            "source_type": "aggregated",
+            "last_verified": "2026-03-07",
+            "notes": "Standard UAE rate",
+            "range": {
+              "low": 440,
+              "high": 560
+            }
+          },
+          "emirates_id": {
+            "value": 370,
+            "unit": "AED",
+            "frequency": "per_visa",
+            "confidence": "high",
+            "source": "https://www.shams.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": null,
+            "range": {
+              "low": 352,
+              "high": 389
+            }
+          },
+          "visa_deposit": {
+            "value": 0,
+            "unit": "AED",
+            "frequency": "per_visa",
+            "confidence": "medium",
+            "source": "https://www.shams.ae",
+            "source_type": "aggregated",
+            "last_verified": "2026-03-07",
+            "notes": null
+          }
+        },
+        "office_costs": {
+          "flexi_desk": {
+            "value": 6000,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "medium",
+            "source": "https://www.shams.ae",
+            "source_type": "third_party",
+            "last_verified": "2026-03-07",
+            "notes": "From Virtuzone comparison",
+            "range": {
+              "low": 5400,
+              "high": 6600
+            }
+          },
+          "physical_office": {
+            "value": 20000,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "low",
+            "source": "https://www.shams.ae",
+            "source_type": "aggregated",
+            "last_verified": "2026-03-07",
+            "notes": "Estimated",
+            "range": {
+              "low": 15000,
+              "high": 25000
+            }
+          }
+        },
+        "government_fees": {
+          "registration_fee": {
+            "value": 1500,
+            "unit": "AED",
+            "frequency": "one-time",
+            "confidence": "medium",
+            "source": "https://www.shams.ae",
+            "source_type": "aggregated",
+            "last_verified": "2026-03-07",
+            "notes": "Estimated"
+          },
+          "establishment_card": {
+            "value": 1500,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "medium",
+            "source": "https://www.shams.ae",
+            "source_type": "aggregated",
+            "last_verified": "2026-03-07",
+            "notes": null
+          }
+        },
+        "pro_fees": {
+          "formation_package": {
+            "value": 0,
+            "unit": "AED",
+            "frequency": "one-time",
+            "confidence": "medium",
+            "source": "https://www.shams.ae",
+            "source_type": "aggregated",
+            "last_verified": "2026-03-07",
+            "notes": "Digital processing"
+          },
+          "annual_renewal_assistance": {
+            "value": 0,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "medium",
+            "source": "https://www.shams.ae",
+            "source_type": "aggregated",
+            "last_verified": "2026-03-07",
+            "notes": null
+          }
+        },
+        "additional_costs": {
+          "health_insurance": {
+            "value": 1500,
+            "range": {
+              "low": 1000,
+              "high": 2000
+            },
+            "unit": "AED",
+            "frequency": "annual_per_visa",
+            "confidence": "medium",
+            "source": "market_research",
+            "source_type": "aggregated",
+            "last_verified": "2026-03-07",
+            "notes": "Mandatory health insurance per visa holder. Basic plan starts ~AED 1,000; comprehensive ~AED 2,000+."
+          },
+          "corporate_tax_compliance": {
+            "value": 8000,
+            "range": {
+              "low": 5000,
+              "high": 15000
+            },
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "low",
+            "source": "market_research",
+            "source_type": "aggregated",
+            "last_verified": "2026-03-07",
+            "notes": "Audit + tax filing. Applies if revenue > AED 375K. Year 2+ cost."
+          }
+        }
+      },
+      "packages": [
+        {
+          "name": "Freelancer Package",
+          "includes": [
+            "freelance_license",
+            "flexi_desk"
+          ],
+          "price": 8500,
+          "currency": "AED",
+          "duration": "1 year",
+          "visas_included": 0,
+          "note": "Best for individual freelancers"
+        }
+      ],
+      "pros": [
+        "Very affordable (from 8,500 AED)",
+        "Ideal for media, content creators, freelancers",
+        "Sharjah location — close to Dubai",
+        "Simple and fast setup",
+        "Low visa costs"
+      ],
+      "cons": [
+        "Sharjah location (not Dubai)",
+        "Data primarily from third-party sources",
+        "Less comprehensive activity support than larger zones",
+        "Limited prestige for corporate use"
+      ]
+    }
+  ],
+  "mainland": {
+    "dubai_ded": {
+      "zone_id": "dubai_ded",
+      "zone_name": "Dubai Mainland (DED/DET)",
+      "zone_type": "mainland",
+      "emirate": "Dubai",
+      "website": "https://www.dubaieconomy.ae",
+      "last_scraped": "2026-03-07T11:00:00+04:00",
+      "scrape_confidence": "medium",
+      "supported_activities": [
+        "trading",
+        "services",
+        "consulting",
+        "technology",
+        "ecommerce",
+        "industrial",
+        "general_trading"
+      ],
+      "pricing": {
+        "license_fees": {
+          "commercial": {
+            "value": 15000,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "medium",
+            "source": "https://www.dubaieconomy.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "Commercial license (General Trading): 10,000–35,000 AED. Using 15,000 as representative."
+          },
+          "professional": {
+            "value": 12000,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "medium",
+            "source": "https://www.dubaieconomy.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "Professional license (Consulting, IT): 10,000–18,000 AED"
+          },
+          "industrial": {
+            "value": 25000,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "medium",
+            "source": "https://www.dubaieconomy.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "Industrial license: 20,000–30,000 AED"
+          },
+          "ecommerce_trader": {
+            "value": 1070,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "high",
+            "source": "https://www.dubaieconomy.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "E-commerce Trader License — includes knowledge/innovation fees. For small-scale online businesses."
+          },
+          "trading": {
+            "value": 15000,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "medium",
+            "source": "https://www.dubaieconomy.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "Same as commercial"
+          },
+          "services": {
+            "value": 12000,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "medium",
+            "source": "https://www.dubaieconomy.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "Same as professional"
+          },
+          "consulting": {
+            "value": 12000,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "medium",
+            "source": "https://www.dubaieconomy.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "Professional license"
+          },
+          "technology": {
+            "value": 12000,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "medium",
+            "source": "https://www.dubaieconomy.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "Professional license"
+          },
+          "ecommerce": {
+            "value": 12000,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "medium",
+            "source": "https://www.dubaieconomy.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "Full commercial e-commerce license. For small-scale, use ecommerce_trader at 1,070."
+          },
+          "general_trading": {
+            "value": 25000,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "medium",
+            "source": "https://www.dubaieconomy.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "General Trading — higher end of commercial range"
+          }
+        },
+        "visa_costs": {
+          "employment_visa": {
+            "value": 5250,
+            "unit": "AED",
+            "frequency": "per_visa",
+            "confidence": "medium",
+            "source": "https://www.dubaieconomy.ae",
+            "source_type": "aggregated",
+            "last_verified": "2026-03-07",
+            "notes": "Total per person 3,000–7,500 AED. Includes work permit, entry, medical, EID, stamping.",
+            "range": {
+              "low": 4620,
+              "high": 5880
+            }
+          },
+          "work_permit": {
+            "value": 2000,
+            "unit": "AED",
+            "frequency": "per_visa",
+            "confidence": "medium",
+            "source": "https://www.dubaieconomy.ae",
+            "source_type": "aggregated",
+            "last_verified": "2026-03-07",
+            "notes": "MOHRE approval: 1,000–3,000 AED",
+            "range": {
+              "low": 1760,
+              "high": 2240
+            }
+          },
+          "entry_permit": {
+            "value": 750,
+            "unit": "AED",
+            "frequency": "per_visa",
+            "confidence": "medium",
+            "source": "https://www.dubaieconomy.ae",
+            "source_type": "aggregated",
+            "last_verified": "2026-03-07",
+            "notes": "500–1,000 AED",
+            "range": {
+              "low": 660,
+              "high": 840
+            }
+          },
+          "medical_fitness": {
+            "value": 650,
+            "unit": "AED",
+            "frequency": "per_visa",
+            "confidence": "medium",
+            "source": "https://www.dubaieconomy.ae",
+            "source_type": "aggregated",
+            "last_verified": "2026-03-07",
+            "notes": "500–800 AED",
+            "range": {
+              "low": 572,
+              "high": 728
+            }
+          },
+          "emirates_id": {
+            "value": 470,
+            "unit": "AED",
+            "frequency": "per_visa",
+            "confidence": "high",
+            "source": "https://www.dubaieconomy.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "370–570 AED for 2 years",
+            "range": {
+              "low": 447,
+              "high": 494
+            }
+          },
+          "visa_stamping": {
+            "value": 1000,
+            "unit": "AED",
+            "frequency": "per_visa",
+            "confidence": "medium",
+            "source": "https://www.dubaieconomy.ae",
+            "source_type": "aggregated",
+            "last_verified": "2026-03-07",
+            "notes": "500–1,500 AED",
+            "range": {
+              "low": 880,
+              "high": 1120
+            }
+          }
+        },
+        "office_costs": {
+          "flexi_desk": {
+            "value": 7500,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "medium",
+            "source": "https://www.dubaieconomy.ae",
+            "source_type": "aggregated",
+            "last_verified": "2026-03-07",
+            "notes": "Ejari-compliant flexi-desk/virtual office: 5,000–10,000 AED. Limited visa quota."
+          },
+          "physical_office": {
+            "value": 22500,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "medium",
+            "source": "https://www.dubaieconomy.ae",
+            "source_type": "aggregated",
+            "last_verified": "2026-03-07",
+            "notes": "15,000–30,000+ AED. Plus Ejari registration."
+          }
+        },
+        "government_fees": {
+          "trade_name_reservation": {
+            "value": 620,
+            "unit": "AED",
+            "frequency": "one-time",
+            "confidence": "high",
+            "source": "https://www.dubaieconomy.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "Standard Arabic/English name. Foreign names: 2,000 AED."
+          },
+          "initial_approval": {
+            "value": 235,
+            "unit": "AED",
+            "frequency": "one-time",
+            "confidence": "high",
+            "source": "https://www.dubaieconomy.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "DED application fee"
+          },
+          "moa_notarization": {
+            "value": 1200,
+            "unit": "AED",
+            "frequency": "one-time",
+            "confidence": "high",
+            "source": "https://www.dubaieconomy.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "Memorandum of Association"
+          },
+          "chamber_of_commerce": {
+            "value": 600,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "medium",
+            "source": "https://www.dubaieconomy.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "Varies by activity. 300 for e-trader."
+          },
+          "ejari_registration": {
+            "value": 120,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "high",
+            "source": "https://www.dubaieconomy.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "Registration 100 + knowledge 10 + innovation 10"
+          },
+          "establishment_card": {
+            "value": 1500,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "medium",
+            "source": "https://www.dubaieconomy.ae",
+            "source_type": "aggregated",
+            "last_verified": "2026-03-07",
+            "notes": "500–2,750 AED"
+          },
+          "market_fees": {
+            "value": 0,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "high",
+            "source": "https://www.dubaieconomy.ae",
+            "source_type": "official",
+            "last_verified": "2026-03-07",
+            "notes": "2.5% of annual office rent — calculated dynamically"
+          }
+        },
+        "pro_fees": {
+          "formation_package": {
+            "value": 3500,
+            "unit": "AED",
+            "frequency": "one-time",
+            "confidence": "medium",
+            "source": "https://www.dubaieconomy.ae",
+            "source_type": "third_party",
+            "last_verified": "2026-03-07",
+            "notes": "Initial setup support: 2,000–5,000 AED"
+          },
+          "annual_renewal_assistance": {
+            "value": 5000,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "medium",
+            "source": "https://www.dubaieconomy.ae",
+            "source_type": "third_party",
+            "last_verified": "2026-03-07",
+            "notes": "Annual PRO services: 3,000–10,000 AED"
+          },
+          "typing_fees": {
+            "value": 400,
+            "unit": "AED",
+            "frequency": "one-time",
+            "confidence": "medium",
+            "source": "https://www.dubaieconomy.ae",
+            "source_type": "third_party",
+            "last_verified": "2026-03-07",
+            "notes": "300–500 AED per batch"
+          }
+        },
+        "local_service_agent": {
+          "annual_fee": {
+            "value": 8000,
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "high",
+            "source": "https://www.dubaieconomy.ae",
+            "source_type": "aggregated",
+            "last_verified": "2026-03-07",
+            "notes": "Administrative LSA only. Not needed for most activities under 100% foreign ownership."
+          },
+          "required_activities": "Only for specific strategic sectors (Oil & Gas, Banking, Telecoms, Defense, Fishing, Commercial Agencies)"
+        },
+        "additional_costs": {
+          "health_insurance": {
+            "value": 1500,
+            "range": {
+              "low": 1000,
+              "high": 2000
+            },
+            "unit": "AED",
+            "frequency": "annual_per_visa",
+            "confidence": "medium",
+            "notes": "Mandatory health insurance per visa holder."
+          },
+          "corporate_tax_compliance": {
+            "value": 8000,
+            "range": {
+              "low": 5000,
+              "high": 15000
+            },
+            "unit": "AED",
+            "frequency": "annual",
+            "confidence": "low",
+            "notes": "Audit + tax filing. Year 2+ cost."
+          }
+        }
+      },
+      "packages": [],
+      "pros": [
+        "Direct access to entire UAE local market",
+        "Eligible for government contracts",
+        "100% foreign ownership for most activities (since 2021)",
+        "No customs duty on local sales (vs. 5% from free zone)",
+        "Wider range of permitted activities",
+        "E-commerce Trader license from just 1,070 AED"
+      ],
+      "cons": [
+        "Higher overall setup and renewal costs",
+        "Physical office mandatory (Ejari required)",
+        "More complex setup process",
+        "LSA may be needed for some activities (8,000 AED/year)",
+        "Annual PRO services recommended (3,000–10,000 AED)",
+        "Annual auditing/accounting required (3,000+ AED)"
+      ]
+    }
+  },
+  "common_costs": {
+    "health_insurance_per_person": {
+      "min": 600,
+      "max": 3000,
+      "typical": 1200,
+      "unit": "AED",
+      "frequency": "annual",
+      "notes": "Mandatory in UAE. Employer-provided for employees."
+    },
+    "bank_account_minimum_balance": {
+      "min": 10000,
+      "max": 50000,
+      "typical": 25000,
+      "unit": "AED",
+      "frequency": "ongoing",
+      "notes": "Varies by bank. Some accounts charge monthly fee instead (e.g., 249 AED/month)."
+    },
+    "accounting_annual": {
+      "min": 3000,
+      "max": 10000,
+      "typical": 5000,
+      "unit": "AED",
+      "frequency": "annual",
+      "notes": "Mandatory for mainland. Recommended for free zones."
+    },
+    "vat_registration": {
+      "value": 0,
+      "unit": "AED",
+      "frequency": "one-time",
+      "notes": "Free to register. Required if revenue exceeds 375,000 AED. Advisory fees: 2,000–5,000 AED."
+    },
+    "vat_filing_annual": {
+      "min": 2000,
+      "max": 5000,
+      "typical": 3000,
+      "unit": "AED",
+      "frequency": "annual",
+      "notes": "If VAT registered. Can self-file for free via FTA portal."
+    },
+    "amendment_fees": {
+      "min": 1000,
+      "max": 5000,
+      "typical": 3000,
+      "unit": "AED",
+      "frequency": "per_event",
+      "notes": "For adding/changing activities, document modifications, etc."
+    },
+    "late_renewal_penalty": {
+      "min": 100,
+      "max": 1000,
+      "typical": 500,
+      "unit": "AED",
+      "frequency": "per_month",
+      "notes": "Penalty for late license renewal"
+    },
+    "attestation_fees": {
+      "min": 500,
+      "max": 2500,
+      "typical": 1500,
+      "unit": "AED",
+      "frequency": "per_event",
+      "notes": "Document attestation/notarization"
+    },
+    "translation_fees": {
+      "min": 200,
+      "max": 500,
+      "typical": 350,
+      "unit": "AED",
+      "frequency": "per_document",
+      "notes": "Arabic translation of documents"
+    }
+  }
+}

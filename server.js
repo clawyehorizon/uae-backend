@@ -23,6 +23,7 @@ const checkoutRoutes = require('./routes/checkout');
 const webhookRoutes = require('./routes/webhooks');
 const reportRoutes = require('./routes/report');
 const leadsRoutes = require('./routes/leads');
+const estimateRoutes = require('./routes/estimate');
 // TEMPORARILY ENABLED for fresh staging database setup
 const migrateRoutes = require('./routes/migrate');
 
@@ -137,6 +138,9 @@ app.use('/api/report', reportRoutes);
 
 // Leads: capture form leads
 app.use('/api/leads', leadsRoutes);
+
+// Estimate: quick cost estimates for frontend calculator
+app.use('/api/estimate', estimateRoutes);
 
 // TEMPORARILY ENABLED for fresh staging database setup
 app.use('/api/migrate', migrateRoutes);
