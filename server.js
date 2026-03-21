@@ -52,21 +52,35 @@ app.use(helmet({
   crossOriginResourcePolicy: { policy: 'cross-origin' },
 }));
 
-// CORS: allow frontend origin
+// CORS: allow frontend origin (including Netlify branch deploys for staging)
 const allowedOrigins = process.env.ALLOWED_ORIGINS
   ? process.env.ALLOWED_ORIGINS.split(',').map(s => s.trim())
   : ['http://localhost:3000', 'https://ehorizonsolutions.net', 'https://bejewelled-figolla-0458c0.netlify.app'];
 
-// Always ensure production domains are included
-if (!allowedOrigins.includes('https://ehorizonsolutions.net')) {
-  allowedOrigins.push('https://ehorizonsolutions.net');
-}
-if (!allowedOrigins.includes('https://bejewelled-figolla-0458c0.netlify.app')) {
-  allowedOrigins.push('https://bejewelled-figolla-0458c0.netlify.app');
+// Always ensure production + staging domains are included
+const requiredOrigins = [
+  'https://ehorizonsolutions.net',
+  'https://bejewelled-figolla-0458c0.netlify.app',
+  'https://main--bejewelled-figolla-0458c0.netlify.app',
+];
+for (const origin of requiredOrigins) {
+  if (!allowedOrigins.includes(origin)) {
+    allowedOrigins.push(origin);
+  }
 }
 
 app.use(cors({
-  origin: allowedOrigins,
+  origin: function (origin, callback) {
+    // Allow requests with no origin (server-to-server, curl, etc.)
+    if (!origin) return callback(null, true);
+    // Allow exact matches from the allowedOrigins list
+    if (allowedOrigins.includes(origin)) return callback(null, true);
+    // Allow any Netlify branch deploy for this site (e.g. deploy-preview-5--site.netlify.app)
+    if (/^https:\/\/[a-z0-9-]+--bejewelled-figolla-0458c0\.netlify\.app$/.test(origin)) {
+      return callback(null, true);
+    }
+    callback(new Error('Not allowed by CORS'));
+  },
   methods: ['GET', 'POST', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization', 'x-api-key'],
   credentials: true,
